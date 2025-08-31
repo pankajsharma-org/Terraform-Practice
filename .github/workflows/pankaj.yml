@@ -28,12 +28,12 @@ jobs:
     - name: Terraform init
       id: init
       run: terraform init
-      working-directory: Terraform-Practice/.github/workflows
+      working-directory: Env/Dev
 
     - name: Terraform Fmt
       id: fmt
       run: terraform fmt
-      working-directory: Terraform-Practice/.github/workflows
+      working-directory: Env/Dev
 
       
       
