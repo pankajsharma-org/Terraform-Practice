@@ -1,36 +1,45 @@
-# This is a basic workflow to help you get started with Actions
+name: 'My_First_Work_Flow'
+run-name: 'My first work'
+on: workflow_dispatch
+  # push:
+  #   branches:
+  #     - main
+  #     - features/*
+permissions:
+  id-token: write
+  contents: read
 
-name: CI
-
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  My_First_Job:
+    name: My First Job
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v5.0.0
+      # working-directory: Repo/.github/workflows
+     
+    - name: HashiCorp - Setup Terraform
+      uses: hashicorp/setup-terraform@v2.0.3
+    - name: Azure Login
+      uses: Azure/login@v2.3.0
+      with:
+        client-id: 0c0b696d-e1a3-401d-b35a-e6f449608125
+        tenant-id: c1458e86-22a3-4b4c-b4af-89ecd5384a8f
+        subscription-id: 5e4fafbb-ef69-4e17-8835-68030d81f758
+   
+      
+     
+    
+    
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+ 
+          
+      
+     
+      
+    
+       
+  
+              
+          
+        
