@@ -21,12 +21,12 @@ jobs:
       uses: hashicorp/setup-terraform@v2.0.3
     - name: Azure Login
       uses: Azure/login@v2.3.0
-        with:
-          client-id: 0c0b696d-e1a3-401d-b35a-e6f449608125
-          tenant-id: c1458e86-22a3-4b4c-b4af-89ecd5384a8f
-          subscription-id: 5e4fafbb-ef69-4e17-8835-68030d81f758
-     
-        
+      with:
+        client-id: 0c0b696d-e1a3-401d-b35a-e6f449608125
+        tenant-id: c1458e86-22a3-4b4c-b4af-89ecd5384a8f
+        subscription-id: 5e4fafbb-ef69-4e17-8835-68030d81f758
+   
+      
        
       
       
