@@ -25,7 +25,17 @@ jobs:
         client-id: 0c0b696d-e1a3-401d-b35a-e6f449608125
         tenant-id: c1458e86-22a3-4b4c-b4af-89ecd5384a8f
         subscription-id: 5e4fafbb-ef69-4e17-8835-68030d81f758
-   
+    - name: Terraform init
+      id: init
+      run: terraform init
+      working-directory: Terraform-Practice/.github/workflows
+
+    - name: Terraform Fmt
+      id: fmt
+      run: terraform fmt
+      working-directory: Terraform-Practice/.github/workflows
+
+      
       
        
       
